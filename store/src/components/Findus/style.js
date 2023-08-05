@@ -1,5 +1,5 @@
 import styled from "styled-components"
 
-export const NavStyle= styled.nav `
+export const UsStyle= styled.section `
    color: red;
 `
