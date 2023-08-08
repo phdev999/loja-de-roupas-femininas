@@ -1,9 +1,9 @@
 import { ButtonStyle } from "./style"
 
-function Button() {
+function Button({value, link}) {
    return (
       <ButtonStyle>
-
+         <a href={link}>{value}</a>
       </ButtonStyle>
    )
 }
