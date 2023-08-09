@@ -1,10 +1,11 @@
 import { DiscountStyle } from "./style"
 
-function Discount() {
+function Discount({porcent}) {
 
     return (
         <DiscountStyle>
-
+            <span>{porcent}</span>
+            Off
         </DiscountStyle>
     )
 

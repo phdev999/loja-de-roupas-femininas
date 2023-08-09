@@ -7,12 +7,13 @@ export const AccessoryStyle= styled.section`
     align-items: center;
     width: 121px;
     height: 180px;
+    padding: 4px 0px 8px 0px;
 
     border-radius: 20px;
     background-color: white;
 
     img {
-        width: 120px;
+        width: inherit;
         height: 120px;
         border-radius: 50%;
 
@@ -28,12 +29,24 @@ export const AccessoryStyle= styled.section`
         height: 210px;
 
         img {
-           width: 150px;
            height: 150px;
         }
 
         #name, #price {
             font-size: 20px;
+        }
+    }
+
+    @media screen and (min-width: 1440px) {
+        width: 200px;
+        height: 300px;
+
+        img {
+            height: 200px;
+        }
+
+        #name, #price {
+            font-size: 30px
         }
     }
 `

@@ -8,8 +8,13 @@ import Slider from "./components/Slider/index"
 import DefaultProduct from './components/DefaultProduct/index.js';
 import Product from './components/Product/index.js';
 import Accessory from './components/Accessory/index.js';
+import Findus from './components/Findus/index.js';
+import Pay from './components/Pay/index.js';
+
 
 import { sideBarSet } from './scripts/script.js';
+import Promotion from './components/Promotion/index.js';
+import OurClient from './components/OurClient/index.js';
 
 function App() {
   return (
@@ -48,9 +53,60 @@ function App() {
             <Accessory name="anel" price="R$19,90" />
             <Accessory name="óculos" price="R$19,90" />
          </section>
+         <h2>Promoções</h2>
+         <section id='promotion-contain'>
+            <Promotion src={"https://"} porcent={"100%"} />
+            <Promotion src={"https://"} porcent={"30%"} />
+            <Promotion src={"https://"} porcent={"30%"} />
+            <Promotion src={"https://"} porcent={"30%"} />
+            <Promotion src={"https://"} porcent={"30%"} />
+         </section>
+         <h2>Encontre-nos</h2>
+         <section id='location'>
+            <Findus address={"rua xyz, nº 2222 - centro cacoal"} hour={"7h - 18h"}/>
+         </section>
+         <h2>Nossos clientes</h2>
+         <section id='review'>
+            <OurClient />
+            <OurClient />
+            <OurClient />
+            <OurClient />
+         </section>
       </MainStyle>
       <FooterStyle>
-
+         <ul>
+            <li>
+               <a href="#" >
+                  <ion-icon name="logo-whatsapp" ></ion-icon>
+               </a>
+            </li>
+            <li>
+               <a href="#" >
+                  <ion-icon name="logo-instagram" ></ion-icon>
+               </a>
+            </li>
+            <li>
+               <a href="#" >
+                  <ion-icon name="logo-facebook" ></ion-icon>
+               </a>
+            </li>
+         </ul>
+         <form method='post'>
+            <fieldset>
+               <legend>receber ofertas por email</legend>
+               <input type='text' placeholder='email'/>
+            </fieldset>
+            <button>receber ofertas</button>
+         </form>
+         <div id='pay'>
+            <span>formas de pagamento</span>
+            {/* de acordo com o cliente */}
+            <div>
+               <Pay content={"visa"}/>
+               <Pay content={"master card"}/>
+               <Pay content={"pix"}/>
+            </div>
+         </div>
       </FooterStyle>
     </>
   );
