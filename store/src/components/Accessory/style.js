@@ -7,6 +7,7 @@ export const AccessoryStyle= styled.section`
     align-items: center;
     width: 121px;
     height: 180px;
+    margin: auto;
     padding: 4px 0px 8px 0px;
 
     border-radius: 20px;

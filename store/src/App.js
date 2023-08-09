@@ -10,7 +10,8 @@ import Product from './components/Product/index.js';
 import Accessory from './components/Accessory/index.js';
 import Findus from './components/Findus/index.js';
 import Pay from './components/Pay/index.js';
-
+import Conjunto from './components/Conjuntos/index.js';
+import ProductLaunch from './components/ProductLaunch/index.js';
 
 import { sideBarSet } from './scripts/script.js';
 import Promotion from './components/Promotion/index.js';
@@ -29,8 +30,16 @@ function App() {
       </HeaderStyle>
       <MainStyle>
          <h2 id='category'>Categorias</h2>
-         <section className="">
-            <h3>Roupas</h3>
+         <section className="box">
+            <div>
+               <h3>Roupas</h3>
+               <select>
+                  <option selected>Filtrar</option>
+                  <option>Roupas</option>
+                  <option>Calçados</option>
+                  <option>Conjuntos</option>
+               </select>
+            </div>
             <div className="content-box">
                <DefaultProduct />
                <DefaultProduct />
@@ -38,6 +47,25 @@ function App() {
                <DefaultProduct />
             </div>
          </section>
+         <section className="box">
+            <h3>calçados</h3>
+            <div className="content-box">
+               <DefaultProduct />
+               <DefaultProduct />
+               <DefaultProduct />
+               <DefaultProduct />
+            </div>
+         </section>
+         <section className="box">
+            <h3>Cojuntos</h3>
+            <div className="content-box">
+               <Conjunto />
+               <Conjunto />
+               <Conjunto />
+               <Conjunto />
+            </div>
+         </section>
+
          <h2 id='product'>Produtos</h2>
          <section id='products-contain'>
             <Product src={""} alt={"foto do produto"} name={"vestido xyz"} price={"$79,90"} link={"#"}/>
@@ -46,14 +74,24 @@ function App() {
             <Product src={""} alt={"foto do produto"} name={"vestido xyz"} price={"$79,90"} link={"#"}/>
             <Product src={""} alt={"foto do produto"} name={"vestido xyz"} price={"$79,90"} link={"#"}/>
          </section>
-         <h2>Acessórios</h2>
+
+         <h2 id="accessory">Acessórios</h2>
          <section id='accessory-contain'>
             <Accessory name="pulceira" price="R$19,90" />
             <Accessory name="colar" price="R$19,90" />
             <Accessory name="anel" price="R$19,90" />
             <Accessory name="óculos" price="R$19,90" />
          </section>
-         <h2>Promoções</h2>
+
+         <h2 id="launch">Lançamentos</h2>
+         <section id='launch-contain'>
+            {/* apagar o component e add tamanho da imagen  */}
+            {/* <ProductLaunch /> */}
+            <img src="#" alt="foto produto lançado" />
+            <img src="#" alt="foto produto lançado" />
+         </section>
+
+         <h2 id="promotion">Promoções</h2>
          <section id='promotion-contain'>
             <Promotion src={"https://"} porcent={"100%"} />
             <Promotion src={"https://"} porcent={"30%"} />
@@ -61,12 +99,14 @@ function App() {
             <Promotion src={"https://"} porcent={"30%"} />
             <Promotion src={"https://"} porcent={"30%"} />
          </section>
-         <h2>Encontre-nos</h2>
+
+         <h2 id="findus">Encontre-nos</h2>
          <section id='location'>
             <Findus address={"rua xyz, nº 2222 - centro cacoal"} hour={"7h - 18h"}/>
          </section>
-         <h2>Nossos clientes</h2>
-         <section id='review'>
+
+         <h2 id='review'>Nossos clientes</h2>
+         <section id='review-container'>
             <OurClient />
             <OurClient />
             <OurClient />

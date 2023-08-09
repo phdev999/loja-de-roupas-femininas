@@ -29,38 +29,84 @@ export const HeaderStyle= styled.header `
 `
 
 export const MainStyle= styled.main `
-    section .content-box {
+    color: white;
+    text-align: center;
+
+    h2 {
+        padding: 21px 0px 14px;
+    }
+    .box {
+        margin-left: 36px;
+    }
+
+    .box .content-box {
         display: flex;
         gap: 35px;
         overflow: auto;
 
         @media screen and ( min-width: 400px ) {
             padding-left: 36px;
-
         }
 
         @media screen and ( min-width: 1440px ) {
             gap: 50px;
             padding-left: 125px;
-
         }
     }
 
-    #products-contain {
+    .box div {
+        width: 100%;
         display: flex;
-        gap: 60px;
+        justify-content: space-between;
+    }
+
+    .box h3 {
+        margin-bottom: 7px;
+    }
+
+    section select {
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        border: none;
+        outline: none;
+        background: transparent;
+    }
+
+    #product, #accessory, #promotion, #launch, #findus, #review {
+        padding: 27px 0px;
+    }
+    #products-contain {
+        margin-left: 53px;
+        display: flex;
+        gap: 18px;
         overflow: auto;
     }
 
     #accessory-contain {
         margin: auto;
         display: flex;
+        justify-content: space-around;
         flex-wrap: wrap;
-        gap: 23px 20px;
+        gap: 20px 25px;
+    }
+
+    #launch-contain {
+        margin-left: 36px;
+        display: flex;
+        gap: 8px;
+        overflow: auto;
+
+        img {
+            width: 226px;
+            height: 280px;
+
+            background-color: #c9c9c9;
+        }
     }
 
     #promotion-contain {
-        width: fit-content;
+        width: min-content;
         margin: 100px auto;
         display:flex;
         flex-direction: column;
@@ -72,7 +118,7 @@ export const MainStyle= styled.main `
         }
     }
 
-    #review {
+    #review-container {
         width: 400px;
         margin: auto;
         display:flex;
