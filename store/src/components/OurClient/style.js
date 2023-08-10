@@ -3,6 +3,7 @@ import styled from "styled-components"
 export const OurStyle= styled.section `
    width: 143px;
    height: 200px;
+   margin-bottom: 39px;
    color: black;
    padding: 0px 20px;
    display: flex;

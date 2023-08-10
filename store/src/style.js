@@ -34,6 +34,11 @@ export const MainStyle= styled.main `
 
     h2 {
         padding: 21px 0px 14px;
+
+        @media screen and (min-width: 400px) {
+            font-size: 32px;
+            padding: 5rem 0rem 3rem;
+        }
     }
     .box {
         margin-left: 36px;
@@ -56,12 +61,16 @@ export const MainStyle= styled.main `
 
     .box div {
         width: 100%;
+        margin-left: inherit;
         display: flex;
         justify-content: space-between;
     }
 
-    .box h3 {
-        margin-bottom: 7px;
+    .box > h3 {
+        text-align: left;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: inherit;
     }
 
     section select {
@@ -102,6 +111,10 @@ export const MainStyle= styled.main `
             height: 280px;
 
             background-color: #c9c9c9;
+        }
+
+        @media screen and (min-width: 400px) {
+            margin: 0px auto;   
         }
     }
 

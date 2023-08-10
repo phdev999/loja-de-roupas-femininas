@@ -11,7 +11,6 @@ import Accessory from './components/Accessory/index.js';
 import Findus from './components/Findus/index.js';
 import Pay from './components/Pay/index.js';
 import Conjunto from './components/Conjuntos/index.js';
-import ProductLaunch from './components/ProductLaunch/index.js';
 
 import { sideBarSet } from './scripts/script.js';
 import Promotion from './components/Promotion/index.js';

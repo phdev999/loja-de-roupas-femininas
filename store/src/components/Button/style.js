@@ -14,4 +14,9 @@ export const ButtonStyle= styled.button`
         color: white;
         text-decoration: none;
     }
+
+    :hover {
+        cursor: pointer;
+        color: red;
+    }
 `
