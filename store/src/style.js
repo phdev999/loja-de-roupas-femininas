@@ -1,25 +1,35 @@
 import styled from "styled-components"
 
-
 export const HeaderStyle= styled.header `
 
     .sideBar {
         width: 0px;
+        height: 100vh;
         display: none;
+        color: white;
 
-        background: white; 
-
+        background: #EC819F;
+        border: .5px solid var(--secondary-color);
         ion-icon {
             margin: 20px;
-            color: white;
             font-size: 30px;
             border-radius: 50%;
             background: black;
         }
+        a {
+            color: inherit;
+            font-size: 15px;
+            display: block;
+            margin: 7px auto;
+            text-decoration: none;
+        }
     }
     .open {
-        display: block;
-        width: 50vw;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+
+        width: 300px;
         height: 100vh;
         position: absolute;
         top: 100px;
@@ -33,19 +43,26 @@ export const MainStyle= styled.main `
     text-align: center;
 
     h2 {
-        padding: 21px 0px 14px;
+        margin: 30px 0px;
 
         @media screen and (min-width: 400px) {
             font-size: 32px;
-            padding: 5rem 0rem 3rem;
+            margin: 32px 0px 32px;
         }
     }
     .box {
         margin-left: 36px;
+        overflow: hidden;
+
+        @media screen and ( min-width: 1000px ) {
+           width: 75%;
+           margin: auto;
+        }
     }
 
     .box .content-box {
         display: flex;
+        justify-content: flex-start;
         gap: 35px;
         overflow: auto;
 
@@ -53,9 +70,8 @@ export const MainStyle= styled.main `
             padding-left: 36px;
         }
 
-        @media screen and ( min-width: 1440px ) {
-            gap: 50px;
-            padding-left: 125px;
+        @media screen and ( min-width: 1000px ) {
+            padding-left: 0px; 
         }
     }
 
@@ -64,6 +80,12 @@ export const MainStyle= styled.main `
         margin-left: inherit;
         display: flex;
         justify-content: space-between;
+
+        h3 {
+            @media screen and ( min-width: 1000px ) {
+               padding: 21px 0px 14px;
+            }
+        }
     }
 
     .box > h3 {
@@ -98,29 +120,41 @@ export const MainStyle= styled.main `
         justify-content: space-around;
         flex-wrap: wrap;
         gap: 20px 25px;
+
+        @media screen and (min-width: 400px) {
+            width: 50%;   
+        }
     }
 
     #launch-contain {
-        margin-left: 36px;
         display: flex;
         gap: 8px;
         overflow: auto;
+        padding-left: 36px;
 
         img {
             width: 226px;
             height: 280px;
+            flex: none;
 
             background-color: #c9c9c9;
         }
 
-        @media screen and (min-width: 400px) {
-            margin: 0px auto;   
+        @media screen and (min-width: 1000px) {
+            width: min-content;
+            margin: auto;
+            gap: 20px;
+
+            img {
+                width: 346px;
+                height: 400px;
+            }
         }
     }
 
     #promotion-contain {
         width: min-content;
-        margin: 100px auto;
+        margin: 0px auto;
         display:flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -144,6 +178,10 @@ export const MainStyle= styled.main `
         @media screen and (min-width: 700px) {
             width: 600px;
         }
+    }
+
+    button:hover {
+        cursor: pointer;
     }
 
 `

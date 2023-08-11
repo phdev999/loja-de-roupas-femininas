@@ -56,11 +56,15 @@ export const ConjuntoStyle= styled.section`
     }
     @media screen and (min-width: 1000px){
         width: 300px;
-        height: 400px;
+        height: 450px;
 
         img {
             width: 300px;
             height: 268px;
+        }
+
+        span {
+            font-size: 25px;
         }
 
         ul {

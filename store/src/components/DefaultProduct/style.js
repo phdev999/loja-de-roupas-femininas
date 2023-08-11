@@ -10,6 +10,7 @@ export const DProductStyle= styled.section`
     justify-content: space-between;
     align-items: center;
     flex: none;
+    color: black;
 
     background-color: white;
     img {

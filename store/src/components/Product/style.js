@@ -3,6 +3,7 @@ import styled from "styled-components"
 export const ProductStyle= styled.section`
     width: 120px;
     height: 230px;
+    color: black;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

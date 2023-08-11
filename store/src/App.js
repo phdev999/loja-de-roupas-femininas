@@ -23,7 +23,13 @@ function App() {
         <Nav />
         <aside className='sideBar'>
            <ion-icon onClick={sideBarSet.close} name="close-outline"></ion-icon>
-           <a href="#categorias" >Categorias</a>
+           <a href="#category" >Categorias</a>
+           <a href="#product" >Produtos</a>
+           <a href="#accessory" >Acessórios</a>
+           <a href="#launch" >Lançamentos</a>
+           <a href="#promotion" >Promoções</a>
+           <a href="#findus" >Encontre-nos</a>
+           <a href="#review" >Nossos Clientes</a>
         </aside>
         <Slider />
       </HeaderStyle>
@@ -40,19 +46,19 @@ function App() {
                </select>
             </div>
             <div className="content-box">
-               <DefaultProduct />
-               <DefaultProduct />
-               <DefaultProduct />
-               <DefaultProduct />
+               <DefaultProduct price={"$49,90"}/>
+               <DefaultProduct price={"49,90"}/>
+               <DefaultProduct price={"49,90"}/>
+               <DefaultProduct price={"49,90"}/>
             </div>
          </section>
          <section className="box">
             <h3>calçados</h3>
             <div className="content-box">
-               <DefaultProduct />
-               <DefaultProduct />
-               <DefaultProduct />
-               <DefaultProduct />
+               <DefaultProduct price={"49,90"}/>
+               <DefaultProduct price={"49,90"}/>
+               <DefaultProduct price={"49,90"}/>
+               <DefaultProduct price={"49,90"}/>
             </div>
          </section>
          <section className="box">
@@ -84,8 +90,6 @@ function App() {
 
          <h2 id="launch">Lançamentos</h2>
          <section id='launch-contain'>
-            {/* apagar o component e add tamanho da imagen  */}
-            {/* <ProductLaunch /> */}
             <img src="#" alt="foto produto lançado" />
             <img src="#" alt="foto produto lançado" />
          </section>

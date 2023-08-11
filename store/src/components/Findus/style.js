@@ -41,19 +41,23 @@ export const UsStyle= styled.section `
       margin: 13px auto;
    }
 
-   @media screen and (min-width: 1440px) {
+   @media screen and (min-width: 1000px) {
       width: 50%;
-      height: min-content;
+      height: fit-content;
+   
+      div {
+         iframe {
+            width: 300px;
+            height: 380px;
+         }
 
-      background-color: deepskyblue;
-
-      iframe {
-         width: 40%;
-         height: 380px;
+         h3, ul {
+            font-size: 25px;
+         }
       }
-
-      h3, ul {
+      address {
          font-size: 25px;
+         padding: 20px;
       }
    }
 `
