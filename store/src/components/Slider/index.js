@@ -14,13 +14,21 @@ function Slider() {
             <Swiper
                 slidesPerView={1}
                 pagination={ {clickable: true} }
-                navigation
+                navigation={true}
+                loop= {true}
+                class="swiper"
             >
                 <SwiperSlide>
-                    <img className="slide-item" src="./assets/images/instagram.png" alt="slide" />
+                    <img className="slide-item" src="./assets/images/vestidopreto1.png" alt="slide" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="./assets/images/menu.png" alt="slide" />
+                    <img src="./assets/images/vestidopreto2.png" alt="slide" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="./assets/images/vestidovermelho.png" alt="slide" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="./assets/images/conjuntopretobranco.png" alt="slide" />
                 </SwiperSlide>
             </Swiper>
 
