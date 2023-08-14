@@ -1,4 +1,5 @@
 import './style.js';
+import { Swiper, SwiperSlide } from "swiper/react"
 
 import { HeaderStyle } from './style.js';
 import { MainStyle } from './style.js';
@@ -47,42 +48,59 @@ function App() {
                   <option>Conjuntos</option>
                </select>
             </div>
-            <div className="content-box">
-               <DefaultProduct price={"$49,90"}/>
-            </div>
+            <Swiper className="content-box"
+               slidesPerView={4}
+               autoplay= {true}
+            >
+               <SwiperSlide>
+                  <DefaultProduct price={"$49,90"}/>
+               </SwiperSlide>
+            </Swiper>
          </section>
          <section className="box">
             <h3>calçados</h3>
-            <div className="content-box">
-               <DefaultProduct price={"49,90"}/>
-               <DefaultProduct price={"49,90"}/>
-               <DefaultProduct price={"49,90"}/>
-               <DefaultProduct price={"49,90"}/>
-            </div>
+            <Swiper className="content-box"
+               slidesPerView={4}
+               autoplay= {true}
+            >
+               <SwiperSlide>
+                  <DefaultProduct price={"49,90"}/>
+               </SwiperSlide>       
+            </Swiper>
          </section>
          <section className="box">
             <h3>Cojuntos</h3>
-            <div className="content-box">
+            <Swiper className="content-box"
+               slidesPerView={3}
+               autoplay= {true}
+            >
                {
                   conjuntos.map((conj) => {
                      return (
-                        <Conjunto key={conj.id} title={conj.title} price={conj.price} imgsrc={conj.imgsrc} details={conj.details} />
+                        <SwiperSlide>
+                           <Conjunto key={conj.id} title={conj.title} price={conj.price} imgsrc={conj.imgsrc} details={conj.details} />
+                        </SwiperSlide>
                      )
                   })
                }
-            </div>
+            </Swiper>
          </section>
 
          <h2 id='product'>Produtos</h2>
-         <section id='products-contain'>
+         <Swiper id='products-contain'
+            slidesPerView={3}
+            autoplay= {true}
+         >
             {
                products.map((product) => {
                   return (
-                     <Product key={product.id} src={product.imgsrc} title={product.title} price={product.price} />
+                     <SwiperSlide>
+                        <Product key={product.id} src={product.imgsrc} title={product.title} price={product.price} />
+                     </SwiperSlide>
                   )
                })
             }
-         </section>
+         </Swiper>
 
          <h2 id="accessory">Acessórios</h2>
          <section id='accessory-contain'>
@@ -93,10 +111,17 @@ function App() {
          </section>
 
          <h2 id="launch">Lançamentos</h2>
-         <section id='launch-contain'>
-            <img src="#" alt="foto produto lançado" />
-            <img src="#" alt="foto produto lançado" />
-         </section>
+         <Swiper id='launch-contain'
+            slidesPerView={1}
+            autoplay
+         >
+            <SwiperSlide>
+               <img src="#" alt="foto produto lançado" />
+            </SwiperSlide>
+            <SwiperSlide>
+               <img src="#" alt="foto produto lançado" />
+            </SwiperSlide>
+         </Swiper>
 
          <h2 id="promotion">Promoções</h2>
          <section id='promotion-contain'>
