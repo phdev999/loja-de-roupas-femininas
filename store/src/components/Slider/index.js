@@ -16,19 +16,21 @@ function Slider() {
                 pagination={ {clickable: true} }
                 navigation={true}
                 loop= {true}
+                autoplay={true}
+                autoplay-delay="1000"
                 class="swiper"
             >
                 <SwiperSlide>
-                    <img className="slide-item" src="./assets/images/vestidopreto1.png" alt="slide" />
+                    <img loading="lazy" className="slide-item" src="./assets/images/vestidopreto1.png" alt="slide" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="./assets/images/vestidopreto2.png" alt="slide" />
+                    <img loading="lazy" src="./assets/images/vestidopreto2.png" alt="slide" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="./assets/images/vestidovermelho.png" alt="slide" />
+                    <img loading="lazy" src="./assets/images/vestidovermelho.png" alt="slide" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="./assets/images/conjuntopretobranco.png" alt="slide" />
+                    <img loading="lazy" src="./assets/images/conjuntopretobranco.png" alt="slide" />
                 </SwiperSlide>
             </Swiper>
 

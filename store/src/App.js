@@ -3,6 +3,7 @@ import './style.js';
 import { HeaderStyle } from './style.js';
 import { MainStyle } from './style.js';
 import { FooterStyle } from './style.js';
+
 import Nav from "./components/ Nav/index.js"
 import Slider from "./components/Slider/index"
 import DefaultProduct from './components/DefaultProduct/index.js';
@@ -11,10 +12,11 @@ import Accessory from './components/Accessory/index.js';
 import Findus from './components/Findus/index.js';
 import Pay from './components/Pay/index.js';
 import Conjunto from './components/Conjuntos/index.js';
+import OurClient from './components/OurClient/index.js';
+import Promotion from './components/Promotion/index.js';
 
 import { sideBarSet } from './scripts/script.js';
-import Promotion from './components/Promotion/index.js';
-import OurClient from './components/OurClient/index.js';
+import { products, conjuntos } from './data/data.js';
 
 function App() {
   return (
@@ -47,9 +49,6 @@ function App() {
             </div>
             <div className="content-box">
                <DefaultProduct price={"$49,90"}/>
-               <DefaultProduct price={"49,90"}/>
-               <DefaultProduct price={"49,90"}/>
-               <DefaultProduct price={"49,90"}/>
             </div>
          </section>
          <section className="box">
@@ -64,20 +63,25 @@ function App() {
          <section className="box">
             <h3>Cojuntos</h3>
             <div className="content-box">
-               <Conjunto />
-               <Conjunto />
-               <Conjunto />
-               <Conjunto />
+               {
+                  conjuntos.map((conj) => {
+                     return (
+                        <Conjunto key={conj.id} title={conj.title} price={conj.price} imgsrc={conj.imgsrc} />
+                     )
+                  })
+               }
             </div>
          </section>
 
          <h2 id='product'>Produtos</h2>
          <section id='products-contain'>
-            <Product src={""} alt={"foto do produto"} name={"vestido xyz"} price={"$79,90"} link={"#"}/>
-            <Product src={""} alt={"foto do produto"} name={"vestido xyz"} price={"$79,90"} link={"#"}/>
-            <Product src={""} alt={"foto do produto"} name={"vestido xyz"} price={"$79,90"} link={"#"}/>
-            <Product src={""} alt={"foto do produto"} name={"vestido xyz"} price={"$79,90"} link={"#"}/>
-            <Product src={""} alt={"foto do produto"} name={"vestido xyz"} price={"$79,90"} link={"#"}/>
+            {
+               products.map((product) => {
+                  return (
+                     <Product key={product.id} src={product.imgsrc} title={product.title} price={product.price}/>
+                  )
+               })
+            }
          </section>
 
          <h2 id="accessory">Acessórios</h2>

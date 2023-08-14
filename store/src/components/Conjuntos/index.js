@@ -1,11 +1,12 @@
 import Button from "../Button"
 import { ConjuntoStyle } from "./style"
 
-function Conjunto() {
+function Conjunto({title, price, imgsrc}) {
    return (
       <ConjuntoStyle>
-         <img src="" alt="" />
-         <span>R$149,90</span>
+         <img src={imgsrc} alt="foto do conjunto de roupa" />
+         <span>{title}</span>
+         <span>{price}</span>
          <ul>
             <li>short</li>
             <li>blusa</li>
