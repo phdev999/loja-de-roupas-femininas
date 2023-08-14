@@ -19,6 +19,7 @@ export const ConjuntoStyle= styled.section`
 
         border-radius: 20px;
         background-color: #c9c9c9;
+        object-fit: cover;
     }
 
     span {

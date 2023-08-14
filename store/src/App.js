@@ -66,7 +66,7 @@ function App() {
                {
                   conjuntos.map((conj) => {
                      return (
-                        <Conjunto key={conj.id} title={conj.title} price={conj.price} imgsrc={conj.imgsrc} />
+                        <Conjunto key={conj.id} title={conj.title} price={conj.price} imgsrc={conj.imgsrc} details={conj.details} />
                      )
                   })
                }
@@ -78,7 +78,7 @@ function App() {
             {
                products.map((product) => {
                   return (
-                     <Product key={product.id} src={product.imgsrc} title={product.title} price={product.price}/>
+                     <Product key={product.id} src={product.imgsrc} title={product.title} price={product.price} />
                   )
                })
             }

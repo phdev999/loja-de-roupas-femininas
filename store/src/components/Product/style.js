@@ -19,6 +19,7 @@ export const ProductStyle= styled.section`
         border-radius: 20px;
 
         background-color: #c9c9c9;
+        object-fit: cover;
     }
 
     #name {
@@ -73,7 +74,7 @@ export const ProductStyle= styled.section`
         }    
 
         #name {
-           font-size: 40px;
+           font-size: 35px;
         }
 
         #price {
