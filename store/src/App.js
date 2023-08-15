@@ -17,7 +17,7 @@ import OurClient from './components/OurClient/index.js';
 import Promotion from './components/Promotion/index.js';
 
 import { sideBarSet } from './scripts/script.js';
-import { products, conjuntos } from './data/data.js';
+import { products, conjuntos, roupas, calcados, lancamentos } from './data/data.js';
 
 function App() {
   return (
@@ -52,9 +52,15 @@ function App() {
                slidesPerView={4}
                autoplay= {true}
             >
-               <SwiperSlide>
-                  <DefaultProduct price={"$49,90"}/>
-               </SwiperSlide>
+               {
+                  roupas.map( (data, index) => {
+                     return (
+                        <SwiperSlide>
+                           <DefaultProduct key={index} price={data.price} src={data.imgsrc} />
+                        </SwiperSlide>
+                     )
+                  })
+               }
             </Swiper>
          </section>
          <section className="box">
@@ -63,9 +69,15 @@ function App() {
                slidesPerView={4}
                autoplay= {true}
             >
-               <SwiperSlide>
-                  <DefaultProduct price={"49,90"}/>
-               </SwiperSlide>       
+            {
+               calcados.map((data, index) => {
+                  return (
+                     <SwiperSlide>
+                        <DefaultProduct key={index} price={data.price} src={data.imgsrc} />
+                     </SwiperSlide>
+                  )
+               })
+            }  
             </Swiper>
          </section>
          <section className="box">
@@ -115,12 +127,15 @@ function App() {
             slidesPerView={1}
             autoplay
          >
-            <SwiperSlide>
-               <img src="#" alt="foto produto lançado" />
-            </SwiperSlide>
-            <SwiperSlide>
-               <img src="#" alt="foto produto lançado" />
-            </SwiperSlide>
+         {
+            lancamentos.map((data, index) => {
+               return (
+                  <SwiperSlide key={index}>
+                     <img src={data.imgsrc} alt="foto produto lançado" />
+                  </SwiperSlide>
+               )
+            })
+         }
          </Swiper>
 
          <h2 id="promotion">Promoções</h2>

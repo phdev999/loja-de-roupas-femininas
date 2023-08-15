@@ -1,10 +1,10 @@
 import { DProductStyle } from "./style"
 import Button from "../Button/index"
 
-function DefaultProduct({price}) {
+function DefaultProduct({price, src}) {
    return (
       <DProductStyle>
-         <img src="" alt="imagem do produto" />
+         <img src={src} alt="imagem do produto" />
          <span>{price}</span>
          <Button value={"ver detalhes"} link={"#"}/>
       </DProductStyle>

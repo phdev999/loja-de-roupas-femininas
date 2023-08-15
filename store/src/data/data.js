@@ -61,16 +61,60 @@ export const products = [
     },
  ];
  
- export const roupas = [];
+ export const roupas = [
+   {
+      id: "cropedd109u29874",
+      price: "R$ 85,00",
+      imgsrc: "./assets/images/cropeddnulamanga.jpg",
+   },
+   {
+      id: "monttaria38y4756",
+      price: "R$ 109,99",
+      imgsrc: "./assets/images/calcamontaria.jpg",
+   },
+   {
+      id: "montaria76i823c",
+      price: "R$ 109,99",
+      imgsrc: "./assets/images/calcamontariailhos",
+   },
+   {
+      id: "macaquinho17h26acade63",
+      price: "R$ 90,00",
+      imgsrc: "./assets/images/macaquinhoacademia.jpg",
+   },
+   {
+      id: "barrigafo2ra3746123",
+      title: "Vestido barriga de fora TAM M G preto",
+      price: "R$ 109,99",
+      imgsrc: "./assets/images/vestidobarrigadefora.jpg",
+   },
+];
  
- export const calçados = [];
+ export const calcados = [
+   {
+      price: "R$ 80,00",
+      imgsrc: "./assets/images/saltofino.jpg",
+   },
+   {
+      price: "R$ 65,00",
+      imgsrc: "./assets/images/tamanco.jpg",
+   },
+   {
+      price: "R$ 65,00",
+      imgsrc: "./assets/images/saltolargo.jpg",
+   },
+   {
+      price: "R$ 65,00",
+      imgsrc: "./assets/images/saltovinil.jpg",
+   },
+];
  
  export const conjuntos = [
     {
        id: "conj18273883",
        title: "Conjunto preto",
        price: "R$ 159.99",
-       imgsrc: "./assets/images/conjuntopretobranco.jpg",
+       imgsrc: "./assets/images/conjuntopretobranco.png",
        details: ["branco", "TAM: P M"]
     },
     {
@@ -95,4 +139,15 @@ export const products = [
        details: ["TAM M 2un 1", "preto e vermelho"]
     },
  ];
- 
+
+ export const lancamentos = [
+   {
+      imgsrc: "./assets/images/saltovinil.jpg",
+   },
+   {
+      imgsrc: "./assets/images/saltolargo.jpg",
+   },
+   {
+      imgsrc: "./assets/images/tamanco.jpg",
+   },
+];

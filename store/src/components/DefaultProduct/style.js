@@ -19,6 +19,7 @@ export const DProductStyle= styled.section`
         border-radius: 0px 0px 10px 10px;
 
         background-color: #c9c9c9;
+        object-fit: cover;
     }
 
     span {

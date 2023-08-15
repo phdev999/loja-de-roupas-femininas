@@ -64,7 +64,8 @@ export const MainStyle= styled.main `
         display: flex;
         justify-content: flex-start;
         gap: 35px;
-        overflow: auto;
+        overflow-x: auto;
+        overflow-y: hidden;
 
         @media screen and ( min-width: 400px ) {
             padding-left: 36px;
@@ -112,6 +113,7 @@ export const MainStyle= styled.main `
         display: flex;
         gap: 18px;
         overflow: auto;
+        overflow-y: hidden;
     }
 
     #accessory-contain {
