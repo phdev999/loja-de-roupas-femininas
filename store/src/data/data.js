@@ -151,3 +151,15 @@ export const products = [
       imgsrc: "./assets/images/tamanco.jpg",
    },
 ];
+
+export const promotion = [
+   {
+      imgsrc: "./assets/images/saltolargo.jpg",
+   },
+   {
+      imgsrc: "./assets/images/saltofino.jpg",
+   },
+   {
+      imgsrc: "./assets/images/saltovinil.jpg",
+   },
+];

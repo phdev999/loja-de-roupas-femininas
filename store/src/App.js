@@ -17,7 +17,7 @@ import OurClient from './components/OurClient/index.js';
 import Promotion from './components/Promotion/index.js';
 
 import { sideBarSet } from './scripts/script.js';
-import { products, conjuntos, roupas, calcados, lancamentos } from './data/data.js';
+import { products, conjuntos, roupas, calcados, lancamentos, promotion } from './data/data.js';
 
 function App() {
   return (
@@ -140,11 +140,13 @@ function App() {
 
          <h2 id="promotion">Promoções</h2>
          <section id='promotion-contain'>
-            <Promotion src={"https://"} porcent={"100%"} />
-            <Promotion src={"https://"} porcent={"30%"} />
-            <Promotion src={"https://"} porcent={"30%"} />
-            <Promotion src={"https://"} porcent={"30%"} />
-            <Promotion src={"https://"} porcent={"30%"} />
+            {
+               promotion.map((data, index)=>{
+                  return (
+                     <Promotion key={index} src={data.imgsrc} porcent={"10%"} />
+                  )
+               })
+            }
          </section>
 
          <h2 id="findus">Encontre-nos</h2>

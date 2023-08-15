@@ -66,6 +66,7 @@ export const MainStyle= styled.main `
         gap: 35px;
         overflow-x: auto;
         overflow-y: hidden;
+        /* --webkit-scrollbar: none; */
 
         @media screen and ( min-width: 400px ) {
             padding-left: 36px;
@@ -140,6 +141,7 @@ export const MainStyle= styled.main `
             flex: none;
 
             background-color: #c9c9c9;
+            object-fit: cover;
         }
 
         @media screen and (min-width: 1000px) {

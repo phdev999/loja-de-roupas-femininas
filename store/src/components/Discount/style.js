@@ -12,4 +12,7 @@ export const DiscountStyle= styled.div `
    font-size: 18px;
    font-weight: bold;
    background-color: red;
+   position: absolute;
+   top: 0px; left: 0px;
+   flex: none;
 `
