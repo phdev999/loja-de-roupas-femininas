@@ -1,4 +1,5 @@
 import PDStyle from "./style"
+import Button  from "../Button"
 
 function ProductDetails({obj}) {
     return (
@@ -11,7 +12,7 @@ function ProductDetails({obj}) {
              </ul>
              <div>
                 <small>gostou do produto? então entre em contato.</small>
-                <Button value="Entrar em contato" link={"#"}/>
+                <Button value="Entrar em contato" />
              </div>
           </div>
         </PDStyle>

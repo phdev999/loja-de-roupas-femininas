@@ -6,7 +6,7 @@ function DefaultProduct({price, src}) {
       <DProductStyle>
          <img src={src} alt="imagem do produto" />
          <span>{price}</span>
-         <Button value={"ver detalhes"} link={"#"}/>
+         <Button value={"ver detalhes"}/>
       </DProductStyle>
    )
 }

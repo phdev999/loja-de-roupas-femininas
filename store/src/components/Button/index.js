@@ -1,9 +1,10 @@
 import { ButtonStyle } from "./style"
+import { Link } from "react-router-dom"
 
-function Button({value, link}) {
+function Button({value}) {
    return (
       <ButtonStyle>
-         <a href={link}>{value}</a>
+         <Link to="/productdetails" >{value}</Link>
       </ButtonStyle>
    )
 }

@@ -1,5 +1,6 @@
 import './style.js';
 import { Swiper, SwiperSlide } from "swiper/react"
+import Routes from './routes/index.js';
 
 import { HeaderStyle } from './style.js';
 import { MainStyle } from './style.js';
@@ -22,6 +23,7 @@ import { products, conjuntos, roupas, calcados, lancamentos, promotion } from '.
 function App() {
   return (
     <>
+      <Routes />
       <HeaderStyle >
         <Nav />
         <aside className='sideBar'>
